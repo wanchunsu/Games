@@ -1,7 +1,4 @@
-/* 
- Wan-Chun Su
- 260729936
- */
+
 
 public class Mexico {
     

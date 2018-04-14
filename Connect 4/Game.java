@@ -1,4 +1,4 @@
-package assignment4Game;
+
 
 import java.io.*;
 
@@ -34,7 +34,7 @@ public class Game {
 	}
 	
 	public static int getNextMove(BufferedReader keyboard, Configuration c, int player){
-		// ADD YOUR CODE HERE
+		
 		//Using a try catch block to account for possible exceptions
 		try{
 		//Letting the user know that AI has made its move, printing out the board, and prompting the user to enter their move
@@ -68,7 +68,7 @@ public class Game {
 			System.out.println("There's been an error");
 			return -1;
 		}
-		 // DON'T FORGET TO CHANGE THE RETURN
+		 
 	}
 	
 	public static int firstMovePlayer1 (){
@@ -76,7 +76,7 @@ public class Game {
 	}
 	
 	public static int movePlayer1 (int columnPlayed2, Configuration c){
-		// ADD YOUR CODE HERE
+		
 		//Using variables to store the columns where the player1 could win in for the next round and for two turns
 		int column1 = c.canWinNextRound(1);
 		int column2 = c.canWinTwoTurns(1);
@@ -101,7 +101,7 @@ public class Game {
 			}
 		}
 		//returning -1 if there is no where on the board to add a disk
-		return -1; // DON'T FORGET TO CHANGE THE RETURN
+		return -1;
 	}
 	
 }

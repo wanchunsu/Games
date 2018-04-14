@@ -1,4 +1,4 @@
-package assignment4Game;
+
 
 public class Configuration {
 	
@@ -30,7 +30,7 @@ public class Configuration {
 	}
 	
 	public void addDisk (int index, int player){
-		// ADD YOUR CODE HERE
+		
 		//Finding the row to add the disk in
 		int rowToAddIn = this.available[index];
 		//updating the board with the added disk
@@ -56,7 +56,7 @@ public class Configuration {
 	}
 	
 	public boolean isWinning (int lastColumnPlayed, int player){
-		// ADD YOUR CODE HERE
+		
 		//finding the row where the last player played
 		int lastRowPlayed=this.available[lastColumnPlayed]-1;
 		//Creating 2D arrays to store the coordinates of the diagonals
@@ -95,7 +95,7 @@ public class Configuration {
 			return true;
 		}
 		
-		return false; // DON'T FORGET TO CHANGE THE RETURN
+		return false; 
 	}
 	/*A helper method for isWinning which looks four consecutive numbers in a row, column
      or diagonal that correspond to the player that is passed as input*/
@@ -173,7 +173,7 @@ public class Configuration {
 	}
 	
 	public int canWinNextRound (int player){
-		// ADD YOUR CODE HERE
+		
 		//Running through the columns and adding disk, calling isWinning and finding out if the player can win in that position, before removing the disk
 		//Returns the column where the player can win in, if none, return -1
 		for(int i=0; i<7; i++) {
@@ -188,7 +188,7 @@ public class Configuration {
 			}
 						
 		}
-		return -1; // DON'T FORGET TO CHANGE THE RETURN
+		return -1; 
 	}
 	//helper method for canWinNextRound and canWinTwoTurns
 	//Removes a disk from the specified column
@@ -201,7 +201,7 @@ public class Configuration {
 	}
 
 	public int canWinTwoTurns (int player){
-		// ADD YOUR CODE HERE
+	
 		//Finding the number corresponding to the opponent and storing it into a variable
 		int opponent;
 		if(player==1) {
@@ -245,7 +245,7 @@ public class Configuration {
 			}
 		}
 		//return -1 if there is no such move
-		return -1; // DON'T FORGET TO CHANGE THE RETURN
+		return -1; 
 	}
 	//A helper method for canWinTwoTurns to find the winning column
 	//It takes a possibleWins array as input and finds the column that is not -1
